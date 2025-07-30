@@ -52,7 +52,7 @@ config :spark,
 config :ayo,
   ecto_repos: [Ayo.Repo],
   generators: [timestamp_type: :utc_datetime],
-  ash_domains: [Ayo.Accounts]
+  ash_domains: [Ayo.Accounts, Ayo.KnowledgeBase]
 
 # Configures the endpoint
 config :ayo, AyoWeb.Endpoint,
