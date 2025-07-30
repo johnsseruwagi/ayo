@@ -14,13 +14,19 @@ defmodule Ayo.KnowledgeBase.Expense do
   end
 
   actions do
-    defaults [:read, :update, :destroy]
+    defaults [:read, :destroy]
 
     create :create do
       primary? true
       accept [:description, :date, :notes, :category_id, :amount]
 
       change {Ayo.KnowledgeBase.Category.Changes.Amount, attribute: :amount}
+    end
+
+    update :update do
+      primary? true
+      accept [:description, :date, :notes, :category_id, :amount]
+      require_atomic? false
     end
 
     read :list do

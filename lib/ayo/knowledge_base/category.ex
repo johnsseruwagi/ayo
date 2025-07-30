@@ -10,7 +10,7 @@ defmodule Ayo.KnowledgeBase.Category do
   end
 
   actions do
-    defaults [:read, :update, :destroy]
+    defaults [:read, :destroy]
 
     create :create do
       primary? true
@@ -18,8 +18,15 @@ defmodule Ayo.KnowledgeBase.Category do
       change {Ayo.KnowledgeBase.Category.Changes.Amount, attribute: :monthly_budget}
     end
 
+    update :update do
+      primary? true
+      accept [:name, :description, :monthly_budget, :category_type]
+      require_atomic? false
+    end
+
     update :update_budget do
       accept [:monthly_budget]
+      require_atomic? false
       change {Ayo.KnowledgeBase.Category.Changes.MonthlyBudgetAmount, attribute: :monthly_budget}
     end
 
