@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="owl" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/owl/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/owl/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/owl/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/owl/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/owl/lib" />
+      <root url="file://$PROJECT_DIR$/deps/owl/lib" />
+    </SOURCES>
+  </library>
+</component>

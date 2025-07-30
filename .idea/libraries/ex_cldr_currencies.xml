@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="ex_cldr_currencies" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr_currencies/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr_currencies/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr_currencies/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr_currencies/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr_currencies/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr_currencies/lib" />
+    </SOURCES>
+  </library>
+</component>

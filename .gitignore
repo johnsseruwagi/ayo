@@ -35,3 +35,6 @@ ayo-*.tar
 npm-debug.log
 /assets/node_modules/
 
+/config/dev_secret.exs
+/config/test_secret.exs
+

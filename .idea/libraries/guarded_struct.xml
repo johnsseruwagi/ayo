@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="guarded_struct" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/guarded_struct/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/guarded_struct/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/guarded_struct/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/guarded_struct/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/guarded_struct/lib" />
+      <root url="file://$PROJECT_DIR$/deps/guarded_struct/lib" />
+    </SOURCES>
+  </library>
+</component>

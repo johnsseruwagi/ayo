@@ -1,15 +1,6 @@
 import Config
 config :ash, policies: [show_policy_breakdowns?: true]
 
-# Configure your database
-config :ayo, Ayo.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "ayo_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -87,3 +78,5 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+import_config "dev_secret.exs"

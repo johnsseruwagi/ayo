@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="reactor" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/reactor/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/reactor/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/reactor/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/reactor/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/reactor/lib" />
+      <root url="file://$PROJECT_DIR$/deps/reactor/lib" />
+    </SOURCES>
+  </library>
+</component>

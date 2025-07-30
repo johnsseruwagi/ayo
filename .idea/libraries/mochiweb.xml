@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="mochiweb" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/mochiweb/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/mochiweb/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/mochiweb/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/mochiweb/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/mochiweb/src" />
+      <root url="file://$PROJECT_DIR$/deps/mochiweb/src" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="mishka_chelekom" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/mishka_chelekom/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/mishka_chelekom/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/mishka_chelekom/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/mishka_chelekom/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/mishka_chelekom/lib" />
+      <root url="file://$PROJECT_DIR$/deps/mishka_chelekom/priv" />
+      <root url="file://$PROJECT_DIR$/deps/mishka_chelekom/lib" />
+      <root url="file://$PROJECT_DIR$/deps/mishka_chelekom/priv" />
+    </SOURCES>
+  </library>
+</component>

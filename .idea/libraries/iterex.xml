@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="iterex" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/iterex/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/iterex/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/iterex/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/iterex/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/iterex/lib" />
+      <root url="file://$PROJECT_DIR$/deps/iterex/lib" />
+    </SOURCES>
+  </library>
+</component>

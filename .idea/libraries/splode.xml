@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="splode" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/splode/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/splode/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/splode/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/splode/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/splode/lib" />
+      <root url="file://$PROJECT_DIR$/deps/splode/lib" />
+    </SOURCES>
+  </library>
+</component>

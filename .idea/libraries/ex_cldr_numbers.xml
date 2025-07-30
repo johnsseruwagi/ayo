@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="ex_cldr_numbers" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr_numbers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr_numbers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr_numbers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr_numbers/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr_numbers/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr_numbers/src" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr_numbers/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr_numbers/src" />
+    </SOURCES>
+  </library>
+</component>
