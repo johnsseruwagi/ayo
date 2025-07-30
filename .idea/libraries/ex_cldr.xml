@@ -5,9 +5,33 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_cldr/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ex_cldr/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/src" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/priv" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/src" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/priv" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/src" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/priv" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/src" />
+      <root url="file://$PROJECT_DIR$/deps/ex_cldr/priv" />
       <root url="file://$PROJECT_DIR$/deps/ex_cldr/lib" />
       <root url="file://$PROJECT_DIR$/deps/ex_cldr/src" />
       <root url="file://$PROJECT_DIR$/deps/ex_cldr/priv" />

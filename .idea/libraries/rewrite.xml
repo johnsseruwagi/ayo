@@ -5,9 +5,25 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/rewrite/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/rewrite/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/rewrite/lib" />
+      <root url="file://$PROJECT_DIR$/deps/rewrite/lib" />
+      <root url="file://$PROJECT_DIR$/deps/rewrite/lib" />
+      <root url="file://$PROJECT_DIR$/deps/rewrite/lib" />
       <root url="file://$PROJECT_DIR$/deps/rewrite/lib" />
       <root url="file://$PROJECT_DIR$/deps/rewrite/lib" />
     </SOURCES>

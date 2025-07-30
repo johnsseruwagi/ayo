@@ -5,9 +5,29 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/spitfire/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/spitfire/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/spitfire/lib" />
+      <root url="file://$PROJECT_DIR$/deps/spitfire/src" />
+      <root url="file://$PROJECT_DIR$/deps/spitfire/lib" />
+      <root url="file://$PROJECT_DIR$/deps/spitfire/src" />
+      <root url="file://$PROJECT_DIR$/deps/spitfire/lib" />
+      <root url="file://$PROJECT_DIR$/deps/spitfire/src" />
+      <root url="file://$PROJECT_DIR$/deps/spitfire/lib" />
+      <root url="file://$PROJECT_DIR$/deps/spitfire/src" />
       <root url="file://$PROJECT_DIR$/deps/spitfire/lib" />
       <root url="file://$PROJECT_DIR$/deps/spitfire/src" />
       <root url="file://$PROJECT_DIR$/deps/spitfire/lib" />

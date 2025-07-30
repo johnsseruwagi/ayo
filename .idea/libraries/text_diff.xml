@@ -5,9 +5,25 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/text_diff/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/text_diff/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/text_diff/lib" />
+      <root url="file://$PROJECT_DIR$/deps/text_diff/lib" />
+      <root url="file://$PROJECT_DIR$/deps/text_diff/lib" />
+      <root url="file://$PROJECT_DIR$/deps/text_diff/lib" />
       <root url="file://$PROJECT_DIR$/deps/text_diff/lib" />
       <root url="file://$PROJECT_DIR$/deps/text_diff/lib" />
     </SOURCES>

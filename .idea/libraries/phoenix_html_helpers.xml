@@ -5,9 +5,25 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/phoenix_html_helpers/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/phoenix_html_helpers/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/phoenix_html_helpers/lib" />
+      <root url="file://$PROJECT_DIR$/deps/phoenix_html_helpers/lib" />
+      <root url="file://$PROJECT_DIR$/deps/phoenix_html_helpers/lib" />
+      <root url="file://$PROJECT_DIR$/deps/phoenix_html_helpers/lib" />
       <root url="file://$PROJECT_DIR$/deps/phoenix_html_helpers/lib" />
       <root url="file://$PROJECT_DIR$/deps/phoenix_html_helpers/lib" />
     </SOURCES>

@@ -15,7 +15,10 @@ defmodule Ayo.KnowledgeBase.Category do
     create :create do
       primary? true
       accept [:name, :description, :monthly_budget, :category_type]
-      change {Ayo.KnowledgeBase.Category.Changes.Amount, attribute: :monthly_budget}
+
+      argument :monthly_budget_amount, :decimal, allow_nil?: false
+
+      change {Ayo.KnowledgeBase.Category.Changes.Amount, attribute: :monthly_budget_amount}
     end
 
     update :update do
@@ -27,12 +30,7 @@ defmodule Ayo.KnowledgeBase.Category do
     update :update_budget do
       accept [:monthly_budget]
       require_atomic? false
-      change {Ayo.KnowledgeBase.Category.Changes.MonthlyBudgetAmount, attribute: :monthly_budget}
-    end
-
-    read :list do
-      primary? true
-      pagination offset?: true, countable: true, default_limit: 25
+      change {Ayo.KnowledgeBase.Category.Changes.Amount, attribute: :monthly_budget}
     end
 
     read :by_type do
@@ -71,11 +69,15 @@ defmodule Ayo.KnowledgeBase.Category do
   validations do
     validate present([:name, :monthly_budget])
 
-    validate {Ayo.KnowledgeBase.Category.Validations.Amount, attribute: :monthly_budget}
+    validate {Ayo.KnowledgeBase.Category.Validations.Amount, attribute: :monthly_budget_amount}
   end
 
   relationships do
     has_many :expenses, Ayo.KnowledgeBase.Expense
+  end
+
+  calculations do
+    calculate :total_spent, AshMoney.Types.Money, Ayo.KnowledgeBase.Category.Calculations.TotalSpent
   end
 
 end

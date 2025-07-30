@@ -5,9 +5,25 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_authentication/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ash_authentication/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/ash_authentication/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ash_authentication/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ash_authentication/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ash_authentication/lib" />
       <root url="file://$PROJECT_DIR$/deps/ash_authentication/lib" />
       <root url="file://$PROJECT_DIR$/deps/ash_authentication/lib" />
     </SOURCES>

@@ -5,9 +5,25 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/sourceror/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/sourceror/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/sourceror/lib" />
+      <root url="file://$PROJECT_DIR$/deps/sourceror/lib" />
+      <root url="file://$PROJECT_DIR$/deps/sourceror/lib" />
+      <root url="file://$PROJECT_DIR$/deps/sourceror/lib" />
       <root url="file://$PROJECT_DIR$/deps/sourceror/lib" />
       <root url="file://$PROJECT_DIR$/deps/sourceror/lib" />
     </SOURCES>

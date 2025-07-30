@@ -5,9 +5,26 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ex_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ex_money/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/ex_money/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_money/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_money/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_money/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ex_money/lib" />
       <root url="file://$PROJECT_DIR$/deps/ex_money/lib" />
       <root url="file://$PROJECT_DIR$/deps/ex_money/lib" />
     </SOURCES>

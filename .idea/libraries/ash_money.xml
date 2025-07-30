@@ -5,9 +5,26 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ash_money/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/ash_money/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/ash_money/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ash_money/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ash_money/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ash_money/lib" />
+      <root url="file://$PROJECT_DIR$/deps/ash_money/lib" />
       <root url="file://$PROJECT_DIR$/deps/ash_money/lib" />
       <root url="file://$PROJECT_DIR$/deps/ash_money/lib" />
     </SOURCES>

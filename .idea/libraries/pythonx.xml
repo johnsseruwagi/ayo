@@ -5,9 +5,25 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/pythonx/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/pythonx/lib" />
+      <root url="file://$PROJECT_DIR$/deps/pythonx/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/pythonx/lib" />
+      <root url="file://$PROJECT_DIR$/deps/pythonx/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/pythonx/lib" />
+      <root url="file://$PROJECT_DIR$/deps/pythonx/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/pythonx/lib" />
+      <root url="file://$PROJECT_DIR$/deps/pythonx/c_src" />
       <root url="file://$PROJECT_DIR$/deps/pythonx/lib" />
       <root url="file://$PROJECT_DIR$/deps/pythonx/c_src" />
       <root url="file://$PROJECT_DIR$/deps/pythonx/lib" />

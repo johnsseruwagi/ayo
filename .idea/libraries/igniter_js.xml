@@ -5,9 +5,21 @@
       <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/igniter_js/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/igniter_js/lib" />
+      <root url="file://$PROJECT_DIR$/deps/igniter_js/lib" />
+      <root url="file://$PROJECT_DIR$/deps/igniter_js/lib" />
+      <root url="file://$PROJECT_DIR$/deps/igniter_js/lib" />
       <root url="file://$PROJECT_DIR$/deps/igniter_js/lib" />
       <root url="file://$PROJECT_DIR$/deps/igniter_js/lib" />
     </SOURCES>

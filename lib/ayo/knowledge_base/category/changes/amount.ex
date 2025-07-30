@@ -12,13 +12,13 @@ defmodule Ayo.KnowledgeBase.Category.Changes.Amount do
 
   @impl true
   def change(changeset, opts, _context) do
-    case Ash.Changeset.fetch_change(changeset, opts[:attribute]) do
-      {:ok, amount} when is_number(amount) or is_binary(amount) ->
+    case Ash.Changeset.fetch_argument_or_attribute(changeset, opts[:attribute]) do
+      {:ok, amount} when not is_nil(amount) ->
         money = Money.new(amount, :USD)
 
-        Ash.Changeset.force_change_attribute(changeset, opts[:attribute], money)
+        Ash.Changeset.force_change_attribute(changeset, :monthly_budget, money)
 
-      :error ->
+      _ ->
         changeset
     end
   end
