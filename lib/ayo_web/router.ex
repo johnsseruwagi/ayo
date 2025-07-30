@@ -36,6 +36,16 @@ defmodule AyoWeb.Router do
       # If an authenticated user must *not* be present:
       # on_mount {AyoWeb.LiveUserAuth, :live_no_user}
     end
+
+    scope "/categories" do
+      live "/", CategoryLive.Index, :index
+      live "/new", CategoryLive.Form, :new
+      live "/:id/edit", CategoryLive.Form, :edit
+
+      live "/:id", CategoryLive.Show, :show
+      live "/:id/show/edit", CategoryLive.Show, :edit
+
+    end
   end
 
   scope "/", AyoWeb do
