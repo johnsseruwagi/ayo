@@ -1,4 +1,4 @@
-defmodule Ayo.KnowledgeBase.Category.Changes.MonthlyBudgetAmount do
+defmodule Ayo.KnowledgeBase.Category.Changes.Amount do
   use Ash.Resource.Change
 
   @impl true

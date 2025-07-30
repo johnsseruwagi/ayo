@@ -7,10 +7,6 @@ defmodule Ayo.KnowledgeBase.Category do
   postgres do
     table "categories"
     repo Ayo.Repo
-
-    references do
-      reference :expenses, on_delete: :delete
-    end
   end
 
   actions do
@@ -19,7 +15,7 @@ defmodule Ayo.KnowledgeBase.Category do
     create :create do
       primary? true
       accept [:name, :description, :monthly_budget, :category_type]
-      change {Ayo.KnowledgeBase.Category.Changes.MonthlyBudgetAmount, attribute: :monthly_budget}
+      change {Ayo.KnowledgeBase.Category.Changes.Amount, attribute: :monthly_budget}
     end
 
     update :update_budget do
@@ -68,7 +64,7 @@ defmodule Ayo.KnowledgeBase.Category do
   validations do
     validate present([:name, :monthly_budget])
 
-    validate {Ayo.KnowledgeBase.Category.Validations.MonthlyBudget, attribute: :monthly_budget}
+    validate {Ayo.KnowledgeBase.Category.Validations.Amount, attribute: :monthly_budget}
   end
 
   relationships do

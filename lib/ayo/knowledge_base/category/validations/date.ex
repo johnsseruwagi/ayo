@@ -1,4 +1,4 @@
-defmodule Ayo.KnowledgeBase.Category.Validations.MonthlyBudget do
+defmodule Ayo.KnowledgeBase.Category.Validations.Date do
   use Ash.Resource.Validation
 
   @impl true
@@ -17,8 +17,12 @@ defmodule Ayo.KnowledgeBase.Category.Validations.MonthlyBudget do
   @impl true
   def validate(changeset, opts, _context) do
     case Ash.Changeset.get_attribute(changeset, opts[:attribute]) do
-      %Money{amount: amount} when amount <= 0 ->
-        {:error, field: opts[:attribute], message: "must be positive"}
+      %Date{} = date ->
+        if Date.compare(date, Date.utc_today()) == :gt do
+          {:error, field: opts[:attribute], message: "cannot be in the future"}
+        else
+          :ok
+        end
 
       _ ->
         :ok

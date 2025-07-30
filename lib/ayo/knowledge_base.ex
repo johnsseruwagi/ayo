@@ -4,6 +4,6 @@ defmodule Ayo.KnowledgeBase do
 
     resources do
       resource Ayo.KnowledgeBase.Category
-#      resource Ayo.KnowledgeBase.Expense
+      resource Ayo.KnowledgeBase.Expense
     end
 end
