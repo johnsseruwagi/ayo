@@ -43,7 +43,7 @@ defmodule AyoWeb.Router do
       live "/:id/edit", CategoryLive.Form, :edit
 
       live "/:id", CategoryLive.Show, :show
-      live "/:id/show/edit", CategoryLive.Show, :edit
+      live "/:id/show/edit", CategoryLive.Form, :edit
 
     end
   end

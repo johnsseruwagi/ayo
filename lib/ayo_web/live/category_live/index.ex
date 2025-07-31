@@ -26,7 +26,7 @@ defmodule AyoWeb.CategoryLive.Index do
   # Helper functions
   defp list_categories do
     Category
-    |> Ash.read!()
+    |> Ash.read!(load: [:total_spent, :budget_percentage, :recent_expenses])
   end
 
   defp category_type_badge(type) do
@@ -42,7 +42,7 @@ defmodule AyoWeb.CategoryLive.Index do
   end
 
   defp format_money(%Money{} = money) do
-    Money.to_string(money)
+    Money.to_string!(money)
   end
 
   defp format_money(_), do: "$0.00"

@@ -1,51 +1,6 @@
 defmodule AyoWeb.CategoryLive.Form do
   use AyoWeb, :live_view
 
-  @impl true
-  def render(assigns) do
-    ~H"""
-    <Layouts.app flash={@flash}>
-      <.header>
-        {@page_title}
-        <:subtitle>Use this form to manage category records in your database.</:subtitle>
-      </.header>
-
-      <.form_wrapper space="medium" for={@form} id="category-form" phx-change="validate" phx-submit="save">
-        <.text_field size="large" field={@form[:name]} label="Name" />
-        <.textarea_field
-          field={@form[:description]}
-          label="Description"
-          size="large"
-        />
-        <.number_field size="large" field={@form[:monthly_budget_amount]}  label="Monthly budget" />
-
-        <.native_select
-            field={@form[:category_type]}
-            type="select"
-            label="Category Type"
-            size="large"
-        >
-          <:option :for={{name, value} <- [
-              {"🍕 Food", :food},
-              {"🚗 Transportation", :transportation},
-              {"🎬 Entertainment", :entertainment},
-              {"⚡ Utilities", :utilities},
-              {"🏥 Healthcare", :healthcare},
-              {"🛍️ Shopping", :shopping},
-              {"📦 Other", :other}
-            ]}
-            value={value}
-          >
-            {name}
-          </:option>
-        </.native_select>
-
-        <.button phx-disable-with="Saving..." variant="primary">Save Category</.button>
-        <.button_link navigate={return_path(@return_to, @category)}>Cancel</.button_link>
-      </.form_wrapper>
-    </Layouts.app>
-    """
-  end
 
   @impl true
   def mount(params, _session, socket) do
@@ -115,4 +70,50 @@ defmodule AyoWeb.CategoryLive.Form do
 
   defp return_path("index", _category), do: ~p"/categories"
   defp return_path("show", category), do: ~p"/categories/#{category.id}"
+
+  @impl true
+  def render(assigns) do
+    ~H"""
+    <Layouts.app flash={@flash}>
+      <.header>
+        {@page_title}
+        <:subtitle>Use this form to manage category records in your database.</:subtitle>
+      </.header>
+
+      <.form_wrapper space="medium" for={@form} id="category-form" phx-change="validate" phx-submit="save">
+        <.text_field size="large" field={@form[:name]} label="Name" />
+        <.textarea_field
+          field={@form[:description]}
+          label="Description"
+          size="large"
+        />
+        <.number_field size="large" field={@form[:monthly_budget_amount]}  label="Monthly budget" />
+
+        <.native_select
+            field={@form[:category_type]}
+            type="select"
+            label="Category Type"
+            size="large"
+        >
+          <:option :for={{name, value} <- [
+              {"🍕 Food", :food},
+              {"🚗 Transportation", :transportation},
+              {"🎬 Entertainment", :entertainment},
+              {"⚡ Utilities", :utilities},
+              {"🏥 Healthcare", :healthcare},
+              {"🛍️ Shopping", :shopping},
+              {"📦 Other", :other}
+            ]}
+            value={value}
+          >
+            {name}
+          </:option>
+        </.native_select>
+
+        <.button phx-disable-with="Saving..." variant="primary">Save Category</.button>
+        <.button_link navigate={return_path(@return_to, @category)}>Cancel</.button_link>
+      </.form_wrapper>
+    </Layouts.app>
+    """
+  end
 end
