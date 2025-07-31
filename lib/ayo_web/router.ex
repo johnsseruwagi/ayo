@@ -45,6 +45,11 @@ defmodule AyoWeb.Router do
       live "/:id", CategoryLive.Show, :show
       live "/:id/show/edit", CategoryLive.Form, :edit
 
+      live "/:category_id/expenses", ExpenseLive.Index, :index
+      live "/:category_id/expenses/new", ExpenseLive.Form, :new
+      live "/:category_id/expenses/:id/edit", ExpenseLive.Form, :edit
+      live "/:category_id/expenses/:id", ExpenseLive.Show, :show
+      live "/:category_id/expenses/:id/show/edit", ExpenseLive.Form, :edit
     end
   end
 

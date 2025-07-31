@@ -17,6 +17,7 @@ defmodule Ayo.KnowledgeBase.Category.Calculations.RecentExpenses do
         category.expenses
         |> Enum.sort_by(& &1.inserted_at, {:desc, DateTime})
         |> Enum.take(5)
+        |> Enum.map(&Ash.load!(&1, [:description, :amount, :currency, :date, :notes]))
 
       else
         []

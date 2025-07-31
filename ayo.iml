@@ -189,6 +189,8 @@
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/yamerl" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/yaml_elixir" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/ymlr" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/cinder" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/cinder" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="ex_money_sql" level="project" />
@@ -365,5 +367,7 @@
     <orderEntry type="library" name="thoas" level="project" />
     <orderEntry type="library" name="yamerl" level="project" />
     <orderEntry type="library" name="temporary_env" level="project" />
+    <orderEntry type="library" name="cinder" level="project" />
+    <orderEntry type="library" name="usage_rules" level="project" />
   </component>
 </module>

@@ -1,0 +1,96 @@
+defmodule AyoWeb.ExpenseLive.Index do
+  use AyoWeb, :live_view
+  use Cinder.Table.UrlSync
+  import Cinder.Table.Refresh
+
+  require Ash.Query
+
+
+  @impl true
+  def mount(params, _sessions, socket) do
+    category_id = params["category_id"]
+    category = read_category(category_id)
+
+    {:ok,
+      socket
+      |> assign(category: category)
+    }
+  end
+
+  @impl true
+  def handle_params(params, uri, socket) do
+    socket = Cinder.Table.UrlSync.handle_params(params, uri, socket)
+    {:noreply, socket}
+  end
+
+  # Helper functions
+  defp read_category(category_id) when is_binary(category_id) do
+    Ayo.KnowledgeBase.Category
+    |> Ash.get!(category_id)
+  end
+
+  defp format_money(%Money{} = money), do: Money.to_string!(money)
+  defp format_money(_), do: "$0.00"
+
+  @impl true
+  def render(assigns) do
+    ~H"""
+      <Layouts.app flash={@flash}>
+        <.header>
+          Expenses for {@category.name}
+          <:subtitle>Track your spending in this category</:subtitle>
+          <:actions>
+            <.button_link variant="outline" color="primary" navigate={~p"/categories/#{@category}/expenses/new"}>
+              New Expense
+            </.button_link>
+          </:actions>
+        </.header>
+        <main>
+          <Cinder.Table.table
+            query = {
+              Ayo.KnowledgeBase.Expense
+              |> Ash.Query.for_read(:list)
+              |> Ash.Query.filter(category_id: @category.id)
+            }
+            id="expenses-table"
+            url_state={@url_state}
+            row_click={fn expense -> JS.navigate(~p"/categories/#{@category}/expenses/#{expense}") end}
+          >
+            <:col :let={expense} field="description" > {expense.description} </:col>
+            <:col :let={expense} field="amount" sort filter > {format_money(expense.amount)} </:col>
+            <:col :let={expense} field="date" sort filter > {Calendar.strftime(expense.date, "%B %d, %Y")} </:col>
+            <:col :let={expense} field="notes" > {expense.notes} </:col>
+            <:col :let={expense} field="actions" class="flex items-center" >
+              <.button_link
+                variant="transparent"
+                color="primary"
+                size="small"
+                navigate={~p"/categories/#{@category}/expenses/#{expense}"}
+              >
+                Show
+              </.button_link>
+              <.button_link
+                variant="transparent"
+                color="secondary"
+                size="small"
+                navigate={~p"/categories/#{@category}/expenses/#{expense}/edit"}
+              >
+                Edit
+              </.button_link>
+              <.button
+                variant="transparent"
+                color="danger"
+                size="small"
+                phx-click={JS.push("delete", value: %{id: expense.id})}
+                data-confirm="Are you sure?"
+              >
+                Delete
+              </.button>
+            </:col>
+          </Cinder.Table.table>
+          <.back navigate={~p"/categories/#{@category}"} >Back to category</.back>
+        </main>
+      </Layouts.app>
+    """
+  end
+end

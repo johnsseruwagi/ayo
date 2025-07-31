@@ -18,7 +18,7 @@ defmodule Ayo.KnowledgeBase.Category do
 
       argument :monthly_budget_amount, :decimal, allow_nil?: false
 
-      change {Ayo.KnowledgeBase.Category.Changes.Amount, attribute: :monthly_budget_amount}
+      change {Ayo.KnowledgeBase.Category.Changes.Amount, [attribute1: :monthly_budget_amount, attribute2: :monthly_budget]}
     end
 
     update :update do

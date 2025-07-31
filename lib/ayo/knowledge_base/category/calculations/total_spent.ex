@@ -6,6 +6,7 @@ defmodule Ayo.KnowledgeBase.Category.Calculations.TotalSpent do
     [expenses: [:amount]]
   end
 
+
   @impl true
   def calculate(records, _opts, _context) do
     Enum.map(records, &calculate_total_spent/1)
@@ -14,10 +15,10 @@ defmodule Ayo.KnowledgeBase.Category.Calculations.TotalSpent do
   defp calculate_total_spent(category) do
     if length(category.expenses) > 0 do
       Enum.reduce(category.expenses, Money.new(0, category.currency), fn expense, acc ->
-          Money.add(acc, expense.amount)
+          Money.add!(acc, expense.amount)
         end)
     else
-      Money.new(0, category.currency)
+      Money.new!(0, category.currency)
     end
   end
 end

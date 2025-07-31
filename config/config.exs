@@ -9,6 +9,8 @@ import Config
 
 config :ex_cldr, default_backend: Ayo.Cldr
 
+config :cinder, default_theme: "modern"
+
 config :ash,
   allow_forbidden_field_for_relationships_by_default?: true,
   include_embedded_source_by_default?: false,

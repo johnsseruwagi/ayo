@@ -20,7 +20,11 @@ defmodule Ayo.KnowledgeBase.Expense do
       primary? true
       accept [:description, :date, :notes, :category_id, :amount]
 
-      change {Ayo.KnowledgeBase.Category.Changes.Amount, attribute: :amount}
+      argument :amount_value, :decimal do
+        allow_nil? false
+      end
+
+      change {Ayo.KnowledgeBase.Category.Changes.Amount, [attribute1: :amount_value, attribute2: :amount]}
     end
 
     update :update do
@@ -30,7 +34,6 @@ defmodule Ayo.KnowledgeBase.Expense do
     end
 
     read :list do
-      primary? true
       pagination offset?: true, countable: true, default_limit: 50
     end
 
