@@ -78,6 +78,7 @@ defmodule Ayo.KnowledgeBase.Category do
 
   calculations do
     calculate :total_spent, AshMoney.Types.Money, Ayo.KnowledgeBase.Category.Calculations.TotalSpent
+    calculate :budget_percentage, :float, Ayo.KnowledgeBase.Category.Calculations.BudgetPercentage
   end
 
 end
