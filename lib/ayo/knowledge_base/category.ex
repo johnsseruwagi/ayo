@@ -24,6 +24,9 @@ defmodule Ayo.KnowledgeBase.Category do
     update :update do
       primary? true
       accept [:name, :description, :monthly_budget, :category_type]
+      argument :monthly_budget_amount, :decimal, allow_nil?: false
+
+      change {Ayo.KnowledgeBase.Category.Changes.Amount, [attribute1: :monthly_budget_amount, attribute2: :monthly_budget]}
       require_atomic? false
     end
 
