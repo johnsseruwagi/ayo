@@ -62,13 +62,12 @@ defmodule AyoWeb.Layouts do
       </div>
     </header>
 
-    <main class="px-4 py-20 sm:px-6 lg:px-8">
+    <main class="px-4 py-10 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-4xl space-y-4">
+        <.flash_group flash={@flash} />
         {render_slot(@inner_block)}
       </div>
     </main>
-
-    <.flash_group flash={@flash} />
     """
   end
 
@@ -84,13 +83,17 @@ defmodule AyoWeb.Layouts do
 
   def flash_group(assigns) do
     ~H"""
-    <div id={@id} aria-live="polite">
-      <.flash kind={:info} flash={@flash} />
-      <.flash kind={:error} flash={@flash} />
+    <div id={@id} aria-live="polite" >
+      <.flash
+        kind={:info}
+        class="fixed top-2 right-2 mr-2 w-80 sm:w-96 rounded-lg p-3 ring-1 bg-emerald-50 text-emerald-800 ring-emerald-500 fill-cyan-900"
+        flash={@flash} />
+      <.flash kind={:error} variant="default" class="fixed top-2 right-2 mr-2 w-80 sm:w-96 rounded-lg p-3 ring-1 bg-rose-50 text-rose-900 shadow-md ring-rose-500 fill-rose-900" flash={@flash} />
 
       <.flash
         id="client-error"
         kind={:error}
+        class="fixed top-2 right-2 mr-2 w-80 sm:w-96 rounded-lg p-3 ring-1 bg-rose-50 text-rose-900 shadow-md ring-rose-500 fill-rose-900"
         title={gettext("We can't find the internet")}
         phx-disconnected={show(".phx-client-error #client-error") |> JS.remove_attribute("hidden")}
         phx-connected={hide("#client-error") |> JS.set_attribute({"hidden", ""})}
@@ -103,6 +106,7 @@ defmodule AyoWeb.Layouts do
       <.flash
         id="server-error"
         kind={:error}
+        class="fixed top-2 right-2 mr-2 w-80 sm:w-96 rounded-lg p-3 ring-1 bg-rose-50 text-rose-900 shadow-md ring-rose-500 fill-rose-900"
         title={gettext("Something went wrong!")}
         phx-disconnected={show(".phx-server-error #server-error") |> JS.remove_attribute("hidden")}
         phx-connected={hide("#server-error") |> JS.set_attribute({"hidden", ""})}
