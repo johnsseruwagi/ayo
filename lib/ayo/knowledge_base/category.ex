@@ -86,4 +86,8 @@ defmodule Ayo.KnowledgeBase.Category do
     calculate :budget_exceeded, :boolean, Ayo.KnowledgeBase.Category.Calculations.BudgetExceeded
   end
 
+  identities do
+    identity :unique_category, [:name, :category_type]
+  end
+
 end
