@@ -80,6 +80,7 @@ defmodule Ayo.KnowledgeBase.Category do
     calculate :total_spent, AshMoney.Types.Money, Ayo.KnowledgeBase.Category.Calculations.TotalSpent
     calculate :budget_percentage, :float, Ayo.KnowledgeBase.Category.Calculations.BudgetPercentage
     calculate :recent_expenses, {:array, :struct}, Ayo.KnowledgeBase.Category.Calculations.RecentExpenses
+    calculate :budget_exceeded, :boolean, Ayo.KnowledgeBase.Category.Calculations.BudgetExceeded
   end
 
 end

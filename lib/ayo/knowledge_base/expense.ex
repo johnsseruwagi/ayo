@@ -30,6 +30,9 @@ defmodule Ayo.KnowledgeBase.Expense do
     update :update do
       primary? true
       accept [:description, :date, :notes, :category_id, :amount]
+      argument :amount_value, :decimal, allow_nil?: false
+
+      change {Ayo.KnowledgeBase.Category.Changes.Amount, [attribute1: :amount_value, attribute2: :amount]}
       require_atomic? false
     end
 

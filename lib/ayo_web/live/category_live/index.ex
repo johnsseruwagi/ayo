@@ -26,7 +26,7 @@ defmodule AyoWeb.CategoryLive.Index do
   # Helper functions
   defp list_categories do
     Category
-    |> Ash.read!(load: [:total_spent, :budget_percentage, :recent_expenses])
+    |> Ash.read!(load: [:total_spent, :budget_percentage, :recent_expenses, :budget_exceeded])
   end
 
   defp category_type_badge(type) do
@@ -118,7 +118,7 @@ defmodule AyoWeb.CategoryLive.Index do
             <span class="text-xs text-gray-500">
               <%= Float.round(category.budget_percentage, 1) %>% of budget used
             </span>
-            <span :if={category.budget_percentage > 100} class="text-xs text-red-600 font-medium">
+            <span :if={category.budget_exceeded} class="text-xs text-red-600 font-medium">
               Over budget!
             </span>
           </div>

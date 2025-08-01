@@ -66,7 +66,7 @@ defmodule AyoWeb.ExpenseLive.Index do
               |> Ash.Query.filter(category_id: @category.id)
             }
             id="expenses-table"
-            theme="retro"
+            theme="futuristic"
             url_state={@url_state}
             row_click={fn expense -> JS.navigate(~p"/categories/#{@category}/expenses/#{expense}") end}
           >
