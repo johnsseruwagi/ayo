@@ -10,16 +10,29 @@ defmodule AyoWeb.ExpenseLive.Index do
   def mount(params, _sessions, socket) do
     category_id = params["category_id"]
     category = read_category(category_id)
-
-    {:ok,
+    socket =
       socket
+      |> assign(page_title: "Category Expenses")
       |> assign(category: category)
-    }
+
+    {:ok, socket}
   end
 
   @impl true
   def handle_params(params, uri, socket) do
     socket = Cinder.Table.UrlSync.handle_params(params, uri, socket)
+    {:noreply, socket}
+  end
+
+  @impl true
+  def handle_event("delete", %{"id" => id}, socket) do
+    expense =
+      Ayo.KnowledgeBase.Expense
+      |> Ash.get!(id)
+
+    Ash.destroy!(expense)
+    socket = refresh_table(socket, "expenses-table")
+
     {:noreply, socket}
   end
 
@@ -53,6 +66,7 @@ defmodule AyoWeb.ExpenseLive.Index do
               |> Ash.Query.filter(category_id: @category.id)
             }
             id="expenses-table"
+            theme="retro"
             url_state={@url_state}
             row_click={fn expense -> JS.navigate(~p"/categories/#{@category}/expenses/#{expense}") end}
           >

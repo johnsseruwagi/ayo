@@ -32,7 +32,6 @@ defmodule AyoWeb.ExpenseLive.Form do
   end
 
   def handle_event("save", %{"expense" => expense_params}, socket) do
-    IO.inspect(socket.assigns.form, label: "Form before submit")
     case AshPhoenix.Form.submit(socket.assigns.form, params: expense_params) do
       {:ok, expense} ->
         notify_parent({:saved, expense})
@@ -103,7 +102,7 @@ defmodule AyoWeb.ExpenseLive.Form do
           size="large"
         />
 
-        <.input field={@form[:category_id]} type="hidden" value={@category.id}/>
+        <.input field={@form[:category_id]} type="hidden"  value={@category.id}/>
 
         <.button phx-disable-with="Saving..." variant="primary">Save Category</.button>
         <.button_link navigate={return_path(@return_to, {@category, @expense})}>
