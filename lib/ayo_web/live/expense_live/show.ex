@@ -19,6 +19,15 @@ defmodule AyoWeb.ExpenseLive.Show do
     {:ok, socket}
   end
 
+  @impl true
+  def handle_params(_params, url, socket) do
+    uri = URI.parse(url)
+    current_uri = uri.path
+    socket = assign(socket, current_uri: current_uri)
+
+    {:noreply, socket}
+  end
+
 
   # Helper functions
   defp format_money(%Money{} = money) do
@@ -30,7 +39,7 @@ defmodule AyoWeb.ExpenseLive.Show do
   @impl true
   def render(assigns) do
     ~H"""
-      <Layouts.app flash={@flash} current_user={@current_user} >
+      <Layouts.app flash={@flash} current_user={@current_user} current_uri={@current_uri} >
         <.header>
           Expense Details
         <:subtitle>Expense in {@category.name}</:subtitle>

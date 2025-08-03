@@ -90,7 +90,18 @@ defmodule AyoWeb.CategoryLive.Form do
           <:subtitle>Use this form to manage category records in your database.</:subtitle>
         </.header>
 
-        <.form_wrapper space="medium" for={@form} id="category-form" phx-change="validate" phx-submit="save">
+        <.form_wrapper
+          variant="bordered"
+          color="white"
+          padding="large"
+          rounded="large"
+          space="large"
+          for={@form}
+          id="category-form"
+          phx-change="validate"
+          phx-submit="save"
+          class="my-8"
+        >
           <.text_field size="large" field={@form[:name]} label="Name" />
           <.textarea_field
             field={@form[:description]}

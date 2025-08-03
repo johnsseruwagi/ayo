@@ -26,6 +26,16 @@ defmodule AyoWeb.ExpenseLive.Form do
   end
 
   @impl true
+  def handle_params(params, url, socket) do
+    uri = URI.parse(url)
+    current_uri = uri.path
+    socket = assign(socket, current_uri: current_uri)
+
+    {:noreply, socket}
+  end
+
+
+  @impl true
   def handle_event("validate", %{"expense" => expense_params}, socket) do
     socket = assign(socket, form: AshPhoenix.Form.validate(socket.assigns.form, expense_params))
     {:noreply, socket}
@@ -82,14 +92,25 @@ defmodule AyoWeb.ExpenseLive.Form do
   @impl true
   def render(assigns) do
     ~H"""
-    <Layouts.app flash={@flash} current_user={@current_user}>
+    <Layouts.app flash={@flash} current_uri={@current_uri}>
       <section class="h-screen">
         <.header>
           {@page_title}
           <:subtitle>Add or edit expenses for {@category.name}</:subtitle>
         </.header>
 
-        <.form_wrapper space="medium" for={@form} id="expense-form" phx-change="validate" phx-submit="save">
+        <.form_wrapper
+          variant="bordered"
+          color="white"
+          padding="large"
+          rounded="large"
+          space="large"
+          for={@form}
+          id="expense-form"
+          phx-change="validate"
+          phx-submit="save"
+          class="my-8"
+        >
           <.textarea_field
             field={@form[:description]}
             label="Description"

@@ -21,6 +21,10 @@ defmodule AyoWeb.ExpenseLive.Index do
   @impl true
   def handle_params(params, uri, socket) do
     socket = Cinder.Table.UrlSync.handle_params(params, uri, socket)
+    uri = URI.parse(uri)
+    current_uri = uri.path
+    socket = assign(socket, current_uri: current_uri)
+
     {:noreply, socket}
   end
 
@@ -48,7 +52,7 @@ defmodule AyoWeb.ExpenseLive.Index do
   @impl true
   def render(assigns) do
     ~H"""
-      <Layouts.app flash={@flash} current_user={@current_user}>
+      <Layouts.app flash={@flash} current_user={@current_user} current_uri={@current_uri}>
         <section class="h-screen">
           <.header>
             Expenses for {@category.name}
