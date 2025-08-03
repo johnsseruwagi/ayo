@@ -25,6 +25,15 @@ defmodule AyoWeb.CategoryLive.Form do
   defp return_to(_), do: "index"
 
   @impl true
+  def handle_params(_params, url, socket) do
+    uri = URI.parse(url)
+    current_uri = uri.path || "/"
+    socket = assign(socket, current_uri: current_uri)
+
+    {:noreply, socket}
+  end
+
+  @impl true
   def handle_event("validate", %{"category" => category_params}, socket) do
     {:noreply,
      assign(socket, form: AshPhoenix.Form.validate(socket.assigns.form, category_params))}
@@ -74,45 +83,47 @@ defmodule AyoWeb.CategoryLive.Form do
   @impl true
   def render(assigns) do
     ~H"""
-    <Layouts.app flash={@flash}>
-      <.header>
-        {@page_title}
-        <:subtitle>Use this form to manage category records in your database.</:subtitle>
-      </.header>
+    <Layouts.app flash={@flash} current_user={@current_user} current_uri={@current_uri}>
+      <section class="h-screen">
+        <.header>
+          {@page_title}
+          <:subtitle>Use this form to manage category records in your database.</:subtitle>
+        </.header>
 
-      <.form_wrapper space="medium" for={@form} id="category-form" phx-change="validate" phx-submit="save">
-        <.text_field size="large" field={@form[:name]} label="Name" />
-        <.textarea_field
-          field={@form[:description]}
-          label="Description"
-          size="large"
-        />
-        <.number_field size="large" field={@form[:monthly_budget_amount]}  label="Monthly budget" />
-
-        <.native_select
-            field={@form[:category_type]}
-            type="select"
-            label="Category Type"
+        <.form_wrapper space="medium" for={@form} id="category-form" phx-change="validate" phx-submit="save">
+          <.text_field size="large" field={@form[:name]} label="Name" />
+          <.textarea_field
+            field={@form[:description]}
+            label="Description"
             size="large"
-        >
-          <:option :for={{name, value} <- [
-              {"🍕 Food", :food},
-              {"🚗 Transportation", :transportation},
-              {"🎬 Entertainment", :entertainment},
-              {"⚡ Utilities", :utilities},
-              {"🏥 Healthcare", :healthcare},
-              {"🛍️ Shopping", :shopping},
-              {"📦 Other", :other}
-            ]}
-            value={value}
-          >
-            {name}
-          </:option>
-        </.native_select>
+          />
+          <.number_field size="large" field={@form[:monthly_budget_amount]}  label="Monthly budget" />
 
-        <.button phx-disable-with="Saving..." variant="primary">Save Category</.button>
-        <.button_link navigate={return_path(@return_to, @category)}>Cancel</.button_link>
-      </.form_wrapper>
+          <.native_select
+              field={@form[:category_type]}
+              type="select"
+              label="Category Type"
+              size="large"
+          >
+            <:option :for={{name, value} <- [
+                {"🍕 Food", :food},
+                {"🚗 Transportation", :transportation},
+                {"🎬 Entertainment", :entertainment},
+                {"⚡ Utilities", :utilities},
+                {"🏥 Healthcare", :healthcare},
+                {"🛍️ Shopping", :shopping},
+                {"📦 Other", :other}
+              ]}
+              value={value}
+            >
+              {name}
+            </:option>
+          </.native_select>
+
+          <.button phx-disable-with="Saving..." variant="bordered" color="info">Save Category</.button>
+          <.button_link variant="outline" color="info" navigate={return_path(@return_to, @category)}>Cancel</.button_link>
+        </.form_wrapper>
+      </section>
     </Layouts.app>
     """
   end

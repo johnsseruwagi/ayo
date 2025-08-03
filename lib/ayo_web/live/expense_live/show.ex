@@ -30,14 +30,14 @@ defmodule AyoWeb.ExpenseLive.Show do
   @impl true
   def render(assigns) do
     ~H"""
-      <Layouts.app flash={@flash} >
+      <Layouts.app flash={@flash} current_user={@current_user} >
         <.header>
           Expense Details
         <:subtitle>Expense in {@category.name}</:subtitle>
         <:actions>
           <.button_link
-            variant="inverted"
-            color="primary"
+            variant="inverted_gradient"
+            color="info"
             navigate={~p"/categories/#{@category}/expenses/#{@expense}/show/edit?return_to=show"}
           >
             Edit expense
@@ -47,12 +47,12 @@ defmodule AyoWeb.ExpenseLive.Show do
 
       <main>
         <.card
-          variant="shadow"
+          variant="bordered"
           color="white"
           padding="medium"
           rounded="medium"
           space="large"
-          border="small"
+
         >
           <.card_title
             position="center"

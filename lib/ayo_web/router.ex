@@ -24,7 +24,23 @@ defmodule AyoWeb.Router do
   scope "/", AyoWeb do
     pipe_through :browser
 
-    ash_authentication_live_session :authenticated_routes do
+    ash_authentication_live_session :authenticated_routes,
+      on_mount: {AyoWeb.LiveUserAuth, :live_user_required} do
+
+      scope "/categories" do
+        live "/", CategoryLive.Index, :index
+        live "/new", CategoryLive.Form, :new
+        live "/:id/edit", CategoryLive.Form, :edit
+
+        live "/:id", CategoryLive.Show, :show
+        live "/:id/show/edit", CategoryLive.Form, :edit
+
+        live "/:category_id/expenses", ExpenseLive.Index, :index
+        live "/:category_id/expenses/new", ExpenseLive.Form, :new
+        live "/:category_id/expenses/:id/edit", ExpenseLive.Form, :edit
+        live "/:category_id/expenses/:id", ExpenseLive.Show, :show
+        live "/:category_id/expenses/:id/show/edit", ExpenseLive.Form, :edit
+      end
       # in each liveview, add one of the following at the top of the module:
       #
       # If an authenticated user must be present:
@@ -37,20 +53,6 @@ defmodule AyoWeb.Router do
       # on_mount {AyoWeb.LiveUserAuth, :live_no_user}
     end
 
-    scope "/categories" do
-      live "/", CategoryLive.Index, :index
-      live "/new", CategoryLive.Form, :new
-      live "/:id/edit", CategoryLive.Form, :edit
-
-      live "/:id", CategoryLive.Show, :show
-      live "/:id/show/edit", CategoryLive.Form, :edit
-
-      live "/:category_id/expenses", ExpenseLive.Index, :index
-      live "/:category_id/expenses/new", ExpenseLive.Form, :new
-      live "/:category_id/expenses/:id/edit", ExpenseLive.Form, :edit
-      live "/:category_id/expenses/:id", ExpenseLive.Show, :show
-      live "/:category_id/expenses/:id/show/edit", ExpenseLive.Form, :edit
-    end
   end
 
   scope "/", AyoWeb do

@@ -13,6 +13,15 @@ defmodule AyoWeb.CategoryLive.Show do
      )}
   end
 
+  @impl true
+  def handle_params(_params, url, socket) do
+    uri = URI.parse(url)
+    current_uri = uri.path || "/"
+    socket = assign(socket, current_uri: current_uri)
+
+    {:noreply, socket}
+  end
+
 
   # Helper functions
   defp format_money(%Money{} = money), do: Money.to_string!(money)
@@ -149,14 +158,14 @@ defmodule AyoWeb.CategoryLive.Show do
   @impl true
   def render(assigns) do
     ~H"""
-      <Layouts.app flash={@flash}>
+      <Layouts.app flash={@flash} current_user={@current_user} current_uri={@current_uri}>
         <.header>
           {@category.name}
           <:subtitle><%= category_type_badge(@category.category_type) %></:subtitle>
           <:actions>
             <.button_link
-              variant="outline"
-              color="primary"
+              variant="bordered"
+              color="info"
               navigate={~p"/categories/#{@category}/show/edit?return_to=show"}
             >
               Edit category
@@ -164,7 +173,7 @@ defmodule AyoWeb.CategoryLive.Show do
             <.button_link
               navigate={~p"/categories/#{@category}/expenses"}
               variant="default_gradient"
-              color="primary"
+              color="info"
             >
               Manage Expenses
             </.button_link>

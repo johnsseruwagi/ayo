@@ -27,6 +27,9 @@ defmodule AyoWeb.Layouts do
   """
   attr :flash, :map, required: true, doc: "the map of flash messages"
 
+  attr :current_user, :map, default: nil, doc: "the current authenticated user"
+  attr :current_uri, :string, default: "/", doc: "the current URI path"
+
   attr :current_scope, :map,
     default: nil,
     doc: "the current [scope](https://hexdocs.pm/phoenix/scopes.html)"
@@ -35,41 +38,101 @@ defmodule AyoWeb.Layouts do
 
   def app(assigns) do
     ~H"""
-    <header class="navbar px-4 sm:px-6 lg:px-8">
-      <div class="flex-1">
-        <a href="/" class="flex-1 flex w-fit items-center gap-2">
-          <img src={~p"/images/logo.svg"} width="36" />
-          <span class="text-sm font-semibold">v{Application.spec(:phoenix, :vsn)}</span>
-        </a>
-      </div>
-      <div class="flex-none">
-        <ul class="flex flex-column px-1 space-x-4 items-center">
-          <li>
-            <a href="https://phoenixframework.org/" class="btn btn-ghost">Website</a>
-          </li>
-          <li>
-            <a href="https://github.com/phoenixframework/phoenix" class="btn btn-ghost">GitHub</a>
-          </li>
-          <li>
-            <.theme_toggle />
-          </li>
-          <li>
-            <a href="https://hexdocs.pm/phoenix/overview.html" class="btn btn-primary">
-              Get Started <span aria-hidden="true">&rarr;</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </header>
+      <.navbar
+        link="/"
+        name="AYO"
+        variant="bordered"
+        color="white"
+        id="main-navbar"
+        padding="large"
+      >
+        <:list>
+          <.nav_link navigate="/" current_uri={@current_uri}>
+            Home
+          </.nav_link>
+        </:list>
+        <:list>
+          <.nav_link navigate={~p"/categories"} current_uri={@current_uri}>
+            Category
+          </.nav_link>
+        </:list>
+        <:list :if={@current_user}>
+          <.nav_link navigate={~p"/"} current_uri={@current_uri}>
+            Profile
+          </.nav_link>
+        </:list>
+        <:list :if={@current_user}>
+          <.link navigate={~p"/sign-out"} method="delete" class="text-gray-700 hover:text-red-600 transition-colors">
+            Logout
+          </.link>
+        </:list>
 
-    <main class="px-4 py-10 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-4xl space-y-4">
-        <.flash_group flash={@flash} />
-        {render_slot(@inner_block)}
-      </div>
-    </main>
+        <:list :if={!@current_user}>
+            <.nav_link navigate={~p"/register"} >
+              Sign Up
+            </.nav_link>
+          </:list>
+          <:list :if={!@current_user}>
+            <.nav_link navigate={~p"/sign-in"} >
+              Login
+            </.nav_link>
+          </:list>
+        <:list>
+          <.theme_toggle/>
+        </:list>
+      </.navbar>
+
+      <main class="px-4 py-10 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl space-y-4">
+          <.flash_group flash={@flash} />
+          {render_slot(@inner_block)}
+        </div>
+      </main>
     """
   end
+
+  @doc """
+  Navigation link that highlights the active page
+  """
+
+  attr :navigate, :string, required: true
+  attr :current_uri, :string, default: "/"
+  attr :class, :string, default: ""
+  slot :inner_block, required: true
+
+  def nav_link(assigns) do
+    # Normalize the navigate path
+    navigate_path = case assigns.navigate do
+      "/" -> "/"
+      path -> path
+    end
+
+    # Normalize the current URI path
+    current_path = case assigns.current_uri do
+      nil -> "/"
+      "/" -> "/"
+      path -> path
+    end
+
+    # Check if current path matches the link path
+    is_active = navigate_path == current_path || parse_nested_uri(navigate_path) == parse_nested_uri(current_path)
+
+
+    assigns = assign(assigns, active: is_active)
+
+    ~H"""
+      <.link navigate={@navigate}
+        class={[
+        "transition-colors duration-200",
+        if(@active, do: "text-cyan-600 font-semibold border-b-2 border-cyan-600", else: "text-gray-700 hover:text-blue-600"),
+        @class
+      ]}
+      >
+        {render_slot(@inner_block)}
+      </.link>
+    """
+  end
+
 
   @doc """
   Shows the flash group with standard titles and content.
@@ -151,5 +214,12 @@ defmodule AyoWeb.Layouts do
       </button>
     </div>
     """
+  end
+
+  defp parse_nested_uri(uri) when is_binary(uri) do
+    uri
+    |> String.split("/")
+    |> Enum.reject(& &1 == "")
+    |> List.first()
   end
 end

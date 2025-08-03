@@ -82,33 +82,35 @@ defmodule AyoWeb.ExpenseLive.Form do
   @impl true
   def render(assigns) do
     ~H"""
-    <Layouts.app flash={@flash}>
-      <.header>
-        {@page_title}
-        <:subtitle>Add or edit expenses for {@category.name}</:subtitle>
-      </.header>
+    <Layouts.app flash={@flash} current_user={@current_user}>
+      <section class="h-screen">
+        <.header>
+          {@page_title}
+          <:subtitle>Add or edit expenses for {@category.name}</:subtitle>
+        </.header>
 
-      <.form_wrapper space="medium" for={@form} id="expense-form" phx-change="validate" phx-submit="save">
-        <.textarea_field
-          field={@form[:description]}
-          label="Description"
-          size="large"
-        />
-        <.number_field size="large" field={@form[:amount_value]}  label="Amount" />
-        <.date_time_field size="large" field={@form[:date]} type="date" label="Date" />
-        <.textarea_field
-          field={@form[:notes]}
-          label="Notes (optional)"
-          size="large"
-        />
+        <.form_wrapper space="medium" for={@form} id="expense-form" phx-change="validate" phx-submit="save">
+          <.textarea_field
+            field={@form[:description]}
+            label="Description"
+            size="large"
+          />
+          <.number_field size="large" field={@form[:amount_value]}  label="Amount" />
+          <.date_time_field size="large" field={@form[:date]} type="date" label="Date" />
+          <.textarea_field
+            field={@form[:notes]}
+            label="Notes (optional)"
+            size="large"
+          />
 
-        <.input field={@form[:category_id]} type="hidden"  value={@category.id}/>
+          <.input field={@form[:category_id]} type="hidden"  value={@category.id}/>
 
-        <.button phx-disable-with="Saving..." variant="primary">Save Category</.button>
-        <.button_link navigate={return_path(@return_to, {@category, @expense})}>
-          Cancel
-        </.button_link>
-      </.form_wrapper>
+          <.button phx-disable-with="Saving..." variant="bordered" color="info">Save Category</.button>
+          <.button_link variant="outline" color="info" navigate={return_path(@return_to, {@category, @expense})}>
+            Cancel
+          </.button_link>
+        </.form_wrapper>
+      </section>
     </Layouts.app>
     """
   end

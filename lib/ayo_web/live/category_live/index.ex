@@ -16,6 +16,16 @@ defmodule AyoWeb.CategoryLive.Index do
   end
 
   @impl true
+  def handle_params(_params, url, socket) do
+    uri = URI.parse(url)
+    current_uri = uri.path || "/"
+    socket = assign(socket, current_uri: current_uri)
+
+    {:noreply, socket}
+  end
+
+
+  @impl true
   def handle_event("delete", %{"id" => id}, socket) do
     category = Ash.get!(Ayo.KnowledgeBase.Category, id)
     Ash.destroy!(category)
@@ -55,12 +65,12 @@ defmodule AyoWeb.CategoryLive.Index do
   @impl true
   def render(assigns) do
     ~H"""
-    <Layouts.app flash={@flash}>
+    <Layouts.app flash={@flash} current_user={@current_user} current_uri={@current_uri}>
       <.header>
         Expense Categories
         <:subtitle>Manage your expense categories and budgets</:subtitle>
         <:actions>
-          <.button_link variant="primary" icon="hero-plus" navigate={~p"/categories/new"}>
+          <.button_link variant="shadow" color="info" icon="hero-plus" navigate={~p"/categories/new"}>
             New Category
           </.button_link>
         </:actions>
